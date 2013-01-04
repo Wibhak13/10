@@ -575,18 +575,13 @@ body {
 
 /* line 19, styles.sass */
 #container {
-  background: black url(/images/galaxytile.gif);
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
-  background-repeat: repeat;
-  position: relative;
-  -webkit-animation: bg 20s linear alternate infinite;
-  -moz-animation: bg 20s linear alternate infinite;
-  -ms-animation: bg 20s linear alternate infinite;
-  -o-animation: bg 20s linear alternate infinite;
-  animation: bg 20s linear alternate infinite; }
+  background: black url(/images/galaxy.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
   /* line 26, styles.sass */
   #container:after {
     display: block;

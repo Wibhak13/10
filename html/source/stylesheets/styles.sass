@@ -17,12 +17,12 @@ body
   overflow-x: hidden
 
 #container
-  background: #000 url(/images/galaxytile.gif)
+  background: #000 url(/images/galaxy.jpg)
   //background-position: 100%
-  +background-size(contain)
-  background-repeat: repeat
+  +background-size(cover)
+  background-repeat: no-repeat
   position: relative
-  +animation(bg 20s linear alternate infinite)
+  //+animation(bg 20s linear alternate infinite)
   &:after
     display: block
     content: ""
