@@ -1,0 +1,30 @@
+// Mixins
+@mixin font-smoothing($value: antialiased)
+  -webkit-font-smoothing: $value
+
+$prefixes: ("-webkit-","-moz-", "-o-", "")
+@mixin selection($color, $background)
+  @each $prefix in $prefixes
+    ::#{$prefix}selection
+      color: $color
+      background: $background
+      
+// Settings
+$base-font-size: 16px
+$base-line-height: 20px
++establish-baseline
+
+// Font Stacks
+$sans-stack   : "Helvetica Neue", Helvetica, Arial, sans-serif
+$serif-stack  : Baskerville, Palatino, Cambria, Georgia, serif
+$mono-stack   : Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif
+
+// Common Font Stacks
+
+.font-garamond
+  font-family: "Adobe Garamond Pro", $serif-stack
+
+@import fonts/arsmaquette
+@import fonts/brown
+@import fonts/neuzeit
+@import fonts/apercu

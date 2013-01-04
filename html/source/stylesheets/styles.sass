@@ -1,0 +1,144 @@
+@import base
+
+body
+  // Global Typography
+  @extend .font-apercu
+  
+  // Init Animation
+  //+animation(intro 1.5s ease-in-out)
+  //+animation-iteration-count(1)
+  
+  // Selection
+  +selection($white, $black)
+  //background: #000
+  // Font Smoohing
+  +font-smoothing()
+
+  overflow-x: hidden
+
+#container
+  background: #000 url(/images/galaxytile.gif)
+  //background-position: 100%
+  +background-size(contain)
+  background-repeat: repeat
+  position: relative
+  +animation(bg 20s linear alternate infinite)
+  &:after
+    display: block
+    content: ""
+    position: absolute
+    width: 100%
+    height: 100%
+    bottom: 0
+    left: 0
+    +background-image(linear-gradient(transparent, rgba(#000, .6)))
+    
+#wrapper
+  width: 960px
+  margin: 0 auto
+  position: relative
+  
+header
+  top: 100px
+  position: relative
+  h1
+    color: $white
+    font-size: 50px
+    text-align: center
+  
+#balls
+  top: 100px
+  position: relative
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 9999
+  .ball
+    position: absolute
+    +transition(all 200ms linear)
+    .circle
+      display: table
+      text-align:  center
+      position: absolute
+      cursor: pointer
+      +border-radius(50%)
+      +transition(all 300ms ease)
+      +background-image(radial-gradient(30% 20%, circle cover, lighten(#000, 35), lighten(#000, 10)))
+      &:hover
+        +box-shadow(0 0 30px 10px rgba(#fff, .2))
+      span
+        font-size: 30px
+        display: table-cell
+        vertical-align: middle
+    .shadow
+      display: block
+      left: 0
+      position: absolute
+      background: none
+      height: 20px
+      +border-radius(50%)
+      background-repeat: no-repeat
+    &.ball-1 
+      top: 50px
+      left: 0px
+      .circle
+        width: 200px
+        height: 200px
+        +animation(levitate 4s ease-in-out infinite alternate both)
+      .shadow
+        top: 220px
+        width: 200px
+        +animation(shadow 4s ease-in-out infinite alternate both)
+    &.ball-2 
+      top: 150px
+      left: 120px
+      .circle
+        width: 300px
+        height: 300px
+        +animation(levitate 3s ease-in-out infinite alternate both)
+      .shadow
+        top: 320px
+        width: 300px
+        +animation(shadow 3s ease-in-out infinite alternate both)
+    &.ball-3
+      top: 150px
+      left: 380px
+      .circle
+        width: 150px
+        height: 150px
+        +animation(levitate 3.6s ease-in-out infinite alternate both)
+      .shadow
+        top: 170px
+        width: 150px
+        +animation(shadow 3.6s ease-in-out infinite alternate both)
+    &.ball-4
+      top: 0px
+      left: 790px
+      .circle
+        width: 150px
+        height: 150px
+        +animation(levitate 2.6s ease-in-out infinite alternate both)
+      .shadow
+        top: 170px
+        width: 150px
+        +animation(shadow 2.6s ease-in-out infinite alternate both)
+    &.ball-5
+      top: 150px
+      left: 580px
+      .circle
+        width: 350px
+        height: 350px
+        +animation(levitate 2.6s ease-in-out infinite alternate both)
+      .shadow
+        top: 370px
+        width: 350px
+        +animation(shadow 2.6s ease-in-out infinite alternate both)
+    &.ball-6
+      top: 150px
+      left: 510px
+      .circle
+        width: 70px
+        height: 70px
+        cursor: default
+        +animation(orbit 5.2s ease-in-out infinite)
+    &.big

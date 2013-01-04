@@ -1,0 +1,38 @@
++keyframes(intro)
+  0%
+    +opacity(0)
+  40%
+    +opacity(0)
+  100%
+    +opacity(1)
+    
++keyframes(bg)
+  0%
+    background-position: 100% -2400px
+  100%
+    background-position: 0 100%
+    
++keyframes(levitate)
+  0%
+    +transform(translate3d(0, -18px, 0))
+  100%
+    +transform(translate3d(0, 18px, 0))
+
++keyframes(orbit)
+  0%
+    +transform(translate3d(30px, 260px, 0))  
+    z-index: 99999
+  50%
+    +transform(translate3d(420px, 50px, 0))
+    +box-shadow(-5px 50px 30px rgba(#000, .2))
+  100%
+    +transform(translate3d(30px, 260px, 0))
+    z-index: -99999
+    
++keyframes(shadow)
+  0%
+    +transform(scale3d(.2, .3, .2))
+    +box-shadow(0px 40px 30px 0 rgba(#000, .4))
+  100%
+    +transform(scale3d(.3, .3, .2))
+    +box-shadow(0px 40px 30px 0 rgba(#000, .6))
